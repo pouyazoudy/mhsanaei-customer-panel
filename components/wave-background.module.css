@@ -1,0 +1,56 @@
+.waveBackground {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.wave {
+  position: fixed;
+  bottom: 42vh;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("../assets/images/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave1 {
+  animation: animate 30s infinite linear;
+  z-index: 1000;
+  opacity: 1;
+}
+
+.wave2 {
+  animation: animate 25s infinite linear;
+  animation-delay: -2s;
+  position: fixed;
+  bottom: 43vh;
+  z-index: 999;
+  opacity: 0.8;
+}
+
+.wave3 {
+  animation: animate 20s infinite linear;
+  animation-delay: -5s;
+  z-index: 998;
+  opacity: 0.6;
+}
+
+.wave4 {
+  animation: animate 15s infinite linear;
+  animation-delay: -10s;
+  position: fixed;
+  bottom: 43vh;
+  z-index: 997;
+  opacity: 0.4;
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -1000px;
+  }
+}
